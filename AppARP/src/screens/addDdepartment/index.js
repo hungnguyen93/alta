@@ -5,10 +5,11 @@ import icBack from '../../image/icBack.png';
 import icDown from '../../image/icDown.png';
 import icBtn from '../../image/btn.png';
 import styles from './styles';
+import PopupAddDepartment from '../popup/AddNewDepartment';
 export default class index extends Component {
     render() {
         const { container, headerTop, icBackStyle, txtTitle, headerTopRight, body, viewDependentRoom,
-            viewTop, txtTop, viewBottom, txtBottom, viewDescription, headerDescription, bodyDescription, 
+            viewTop, txtTop, viewBottom, txtBottom, viewDescription, headerDescription, bodyDescription,
             icdown, footer, icbtn, txtRefresh
         } = styles;
         return (
@@ -17,7 +18,8 @@ export default class index extends Component {
                     <TouchableOpacity>
                         <Image
                             source={icBack}
-                            style={icBackStyle} />
+                            style={icBackStyle}
+                        />
                     </TouchableOpacity>
                     <Text style={txtTitle}>Thêm mới phòng ban</Text>
                     <View style={headerTopRight} />
@@ -28,8 +30,10 @@ export default class index extends Component {
                             <Text style={txtTop}>Phòng trực thuộc</Text>
                         </View>
                         <View style={viewBottom} >
-                            <Text style={txtBottom}>Nhân viên</Text>
-                            <Image style={icdown} source={icDown} />
+                            <Text style={txtBottom}></Text>
+                            <TouchableOpacity onPress={() => this.ref._OpenPopup()}>
+                                <Image style={icdown} source={icDown} />
+                            </TouchableOpacity>
                         </View>
                     </View>
                     <View style={viewDependentRoom}>
@@ -64,8 +68,9 @@ export default class index extends Component {
                         </ImageBackground>
                     </TouchableOpacity>
                 </View>
-
+                <PopupAddDepartment ref={ref => this.ref = ref} />
             </View>
         );
     }
+
 }

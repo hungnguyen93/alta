@@ -5,8 +5,8 @@ import AddNewDepartment from './src/screens/popup/AddNewDepartment';
 export default class App extends Component {
   render() {
     return (
-    // <AppNavigator />
-    <AddNewDepartment/>
+    <AppNavigator />
+    // <AddNewDepartment/>
     );
   }
 }

@@ -7,9 +7,11 @@ const icIscheckHeight = (icCloseWidth / 55) * 40;
 
 const Styles = StyleSheet.create({
     container: {
-        flex: 1,
         justifyContent: 'center',
-        backgroundColor:'gray'
+        backgroundColor:'rgba(0, 0, 1, 0.5)',
+        position: 'absolute',
+        width:'100%',
+        height:'100%'
     },
     containerBody: {
         height: height(50),
@@ -35,6 +37,9 @@ const Styles = StyleSheet.create({
     icclose:{
         height:icCloseWidth,
         width:icCloseWidth
+    },
+    body:{
+        flex:1
     },
     viewtxtDepartment:{
         height:height(7),
