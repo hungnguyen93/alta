@@ -70,29 +70,6 @@ const styles = StyleSheet.create({
        
         justifyContent:'center',
         alignItems:'center'
-    },
-    headerTop:{
-        height:height(11),
-        backgroundColor:'#ff7a03',
-        flexDirection:'row',
-        alignItems:'flex-end',
-        justifyContent:'space-between',
-        padding:8
-    },
-    icBackStyle:{
-        height:height(3),
-        width:width(4)
-    },
-    txtTitle:{
-        color:'white',
-        fontSize:totalSize(2),
-        fontWeight:'bold'
-
-    },
-    rightHeder:{
-        height:height(3),
-        width:width(4)
     }
-
 });
 export default styles;

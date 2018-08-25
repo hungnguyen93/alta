@@ -44,7 +44,7 @@ const Authentication = createStackNavigator(
        }
     },
     {
-        initialRouteName: 'addDepartment',
+        initialRouteName: 'login',
         navigationOptions: {
         header: null,
         }

@@ -6,28 +6,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white'
     },
-    headerTop:{
-        height:height(10),
-        backgroundColor:'#ff7a03',
-        flexDirection:'row',
-        alignItems:'flex-end',
-        justifyContent:'space-between',
-        padding:8
-    },
-    icBackStyle:{
-        height:height(3),
-        width:width(4)
-    },
-    txtTitle:{
-        color:'white',
-        fontSize:totalSize(2),
-        fontWeight:'bold'
-
-    },
-    headerTopRight:{
-        height:height(3),
-        width:width(4)
-    },
     header: {
         height: height(10),
         justifyContent: 'center'

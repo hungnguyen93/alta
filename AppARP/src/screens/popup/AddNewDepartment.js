@@ -53,14 +53,18 @@ export default class AddNewDepartment extends Component {
             );
         } else return false
     }
-    _Touch = (index) => {
+    _Touch = (index,Department) => {
         if (this.state.selected === index) {
             this.setState({ selected: undefined })
         } else {
             this.setState({
                 selected: index
+
             });
+            this._ClosePopup();
+            this.props._selected(Department)
         }
+        
     }
     _OpenPopup = () => {
         this.setState({

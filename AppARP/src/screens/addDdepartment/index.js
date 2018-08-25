@@ -7,6 +7,12 @@ import icBtn from '../../image/btn.png';
 import styles from './styles';
 import PopupAddDepartment from '../popup/AddNewDepartment';
 export default class index extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name:''
+        }
+    }
     render() {
         const { container, headerTop, icBackStyle, txtTitle, headerTopRight, body, viewDependentRoom,
             viewTop, txtTop, viewBottom, txtBottom, viewDescription, headerDescription, bodyDescription,
@@ -30,7 +36,7 @@ export default class index extends Component {
                             <Text style={txtTop}>Phòng trực thuộc</Text>
                         </View>
                         <View style={viewBottom} >
-                            <Text style={txtBottom}></Text>
+                            <Text style={txtBottom}>{this.state.name}</Text>
                             <TouchableOpacity onPress={() => this.ref._OpenPopup()}>
                                 <Image style={icdown} source={icDown} />
                             </TouchableOpacity>
@@ -68,7 +74,10 @@ export default class index extends Component {
                         </ImageBackground>
                     </TouchableOpacity>
                 </View>
-                <PopupAddDepartment ref={ref => this.ref = ref} />
+                <PopupAddDepartment 
+                ref={ref => this.ref = ref} 
+                _selected= { value => this.setState({name : value}) }
+                />
             </View>
         );
     }

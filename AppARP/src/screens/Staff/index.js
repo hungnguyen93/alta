@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {
-    View, Text, SectionList, Image, TouchableOpacity,
-    KeyboardAvoidingView
-} from 'react-native';
-import icBack from '../../image/icBack.png';
+    View, Text, SectionList, KeyboardAvoidingView } from 'react-native';
 import styles from './styles';
 import Search from '../../share/Search';
+import Header from '../../share/Header';
+import icBack from '../../image/icBack.png';
 export default class index extends Component {
     render() {
         var sectionData = [
@@ -15,21 +14,14 @@ export default class index extends Component {
             { title: "D", data: ["Nguyen Thi Dao", "Tran Van Do", "Su Di"] },
         ]
         const {
-            container, headerTop, icBackStyle, txtTitle, headerTopRight, header,
-            body, viewTitleContact, txtTitleContact,
-            viewContactName, txtName
+            container, header, body, viewTitleContact, txtTitleContact, viewContactName, txtName
         } = styles;
         return (
             <View style={container}>
-                <View style={headerTop}>
-                    <TouchableOpacity>
-                        <Image
-                            source={icBack}
-                            style={icBackStyle} />
-                    </TouchableOpacity>
-                    <Text style={txtTitle}>Nhân viên</Text>
-                    <View style={headerTopRight} />
-                </View>
+                <Header
+                    source={icBack}
+                    title='Nhân viên'
+                />
                 <View style={header}>
                     <Search />
                 </View>
